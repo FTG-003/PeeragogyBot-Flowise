@@ -3,6 +3,8 @@ FROM flowiseai/flowise:2.2.7-patch.1
 # Override ENTRYPOINT del base image
 ENTRYPOINT []
 
+ENV PORT=$PORT
+
 EXPOSE $PORT
 
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
