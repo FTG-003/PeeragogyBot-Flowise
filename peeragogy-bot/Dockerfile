@@ -1,11 +1,8 @@
 
-FROM flowiseai/flowise:latest
+FROM flowiseai/flowise:2.2.7-patch.1
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-COPY flowise.json /app/flowise.json
+EXPOSE $PORT
 
-EXPOSE 3000
-
-CMD ["pnpm", "start"]
-
+CMD flowise start --PORT=$PORT
