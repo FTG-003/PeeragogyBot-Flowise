@@ -1,0 +1,11 @@
+# Local secrets
+.env
+
+# Node / pnpm artifacts (in caso serva)
+node_modules/
+dist/
+pnpm-lock.yaml
+
+# OS-specific
+.DS_Store
+
