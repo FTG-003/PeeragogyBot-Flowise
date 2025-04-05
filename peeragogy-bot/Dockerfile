@@ -6,4 +6,4 @@ ENV PORT=$PORT
 
 EXPOSE $PORT
 
-CMD ["flowise", "start", "--PORT=$PORT", "--HOST=0.0.0.0"]
+CMD ["flowise", "start", "--PORT=$PORT"]
