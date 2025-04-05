@@ -1,21 +1,10 @@
 version: "3.8"
-
 services:
-  peeragogybot:
-    build: .
-    container_name: peeragogybot
+  flowise:
+    image: flowiseai/flowise
     ports:
       - "3000:3000"
     environment:
       - FLOWISE_USERNAME=admin
       - FLOWISE_PASSWORD=supersecret
-      - DATABASE_TYPE=sqlite
-      - DATABASE_PATH=/root/.flowise/database.db
-      - APIKEY_PATH=/root/.flowise
-      - LOG_PATH=/root/.flowise/logs
-      - SECRETKEY_PATH=/root/.flowise
-      - BLOB_STORAGE_PATH=/root/.flowise/storage
-    volumes:
-      - ./peeragogy-bot/.flowise:/root/.flowise
-    restart: unless-stopped
-
+    restart: on-failure:10
