@@ -1,10 +1,11 @@
 version: "3.8"
+
 services:
-  flowise:
+  peeragogybot:
     image: flowiseai/flowise
+    container_name: peeragogybot
     ports:
       - "3000:3000"
-    environment:
-      - FLOWISE_USERNAME=admin
-      - FLOWISE_PASSWORD=supersecret
+    env_file:
+      - .env
     restart: on-failure:10
