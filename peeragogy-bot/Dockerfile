@@ -1,9 +1,6 @@
-FROM flowiseai/flowise:2.2.7-patch.1
-
-ENTRYPOINT []
-
-ENV PORT=$PORT
-
-EXPOSE $PORT
-
-CMD ["flowise", "start", "--PORT=$PORT"]
+FROM node:18
+WORKDIR /app
+COPY . .
+RUN npm install
+EXPOSE 3000
+CMD ["npx", "flowise", "start"]
