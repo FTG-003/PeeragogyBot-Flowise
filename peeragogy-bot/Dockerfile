@@ -1,10 +1,9 @@
-FROM node:18
+FROM flowiseai/flowise:2.2.7-patch.1
 
-WORKDIR /app
+ENTRYPOINT []
 
-# Installa Flowise globalmente
-RUN npm install -g flowise
+ENV PORT=$PORT
 
-EXPOSE 3000
+EXPOSE $PORT
 
-CMD ["npx", "flowise", "start"]
+CMD ["flowise", "start", "--PORT=$PORT", "--HOST=0.0.0.0"]
