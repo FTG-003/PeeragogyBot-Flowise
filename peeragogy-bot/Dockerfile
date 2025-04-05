@@ -1,7 +1,7 @@
 FROM node:18
 
 WORKDIR /app
-COPY . .
+COPY ./chatbot_deploy/peeragogy-bot/
 
 RUN npm install
 EXPOSE 3000
