@@ -1,5 +1,0 @@
-<body>
-  <!-- contenuto... -->
-  <script type="module" src="./js/peerbot-embed.js"></script>
-</body>
-
