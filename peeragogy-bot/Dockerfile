@@ -2,16 +2,14 @@ FROM flowiseai/flowise:latest
 
 WORKDIR /app
 
-# Copia il tuo flow nella home di Flowise
-COPY ./peeragogy-bot /root/.flowise
+# Copia i flussi nella home del container
+COPY ./peeragogy-bot/.flowise /root/.flowise
 
-# Railway assegna la porta dinamicamente via env variable $PORT
-ENV PORT=${PORT}
+# Configurazione compatibile Railway
+ENV PORT=7860
 ENV HOST=0.0.0.0
 
-# Facoltativo, espone comunque la porta di default
 EXPOSE 3000
 
-# Avvia Flowise usando le variabili d'ambiente
-CMD ["sh", "-c", "flowise start --PORT=${PORT} --HOST=0.0.0.0"]
-
+# Avvio Flowise sulla porta dinamica
+CMD ["sh", "-c", "flowise start --PORT=${PORT} --HOST=${HOST}"]
