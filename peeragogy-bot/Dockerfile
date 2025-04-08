@@ -3,7 +3,8 @@ FROM flowiseai/flowise:latest
 WORKDIR /app
 
 # Copia i flussi nella home del container
-COPY ./peeragogy-bot/.flowise /root/.flowise
+COPY ./peeragogy-bot/Chatflows /root/.flowise
+
 
 # Configurazione compatibile Railway
 ENV PORT=7860
