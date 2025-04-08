@@ -3,7 +3,8 @@ FROM flowiseai/flowise:latest
 WORKDIR /app
 
 # Copia i flussi nella home del container
-COPY ./peeragogy-bot/Chatflows /root/.flowise
+COPY ./peeragogy-bot/.flowise /root/.flowise/
+
 
 
 # Configurazione compatibile Railway
