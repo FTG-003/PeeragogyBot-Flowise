@@ -13,4 +13,5 @@ ENV HOST=0.0.0.0
 EXPOSE 3000
 
 # Avvia Flowise usando le variabili d'ambiente
-CMD ["sh", "-c", "flowise start --PORT $PORT --HOST $HOST"]
+CMD ["sh", "-c", "flowise start --PORT=${PORT} --HOST=0.0.0.0"]
+
