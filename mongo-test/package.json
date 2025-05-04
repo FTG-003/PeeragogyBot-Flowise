@@ -1,0 +1,15 @@
+{
+  "name": "mongo-test",
+  "version": "1.0.0",
+  "description": "Test script per connessione e TTL su MongoDB Atlas",
+  "main": "check-mongo.js",
+  "scripts": {
+    "check": "node check-mongo.js"
+  },
+  "author": "Fabry (FTG-003)",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mongodb": "^6.15.0"
+  }
+}
